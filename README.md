@@ -40,6 +40,6 @@ Next, you will see a login form, where you must enter the existing username and 
 <img width="1496" alt="Снимок экрана 2022-01-20 в 20 50 00" src="https://user-images.githubusercontent.com/82763714/150361961-be57e56c-9d4b-4f96-b53c-78a4cf717dd2.png">
 
 
-### ToDo Tasks!
+### ToDo Tasks
 
 <img width="1496" alt="Снимок экрана 2022-01-20 в 20 51 47" src="https://user-images.githubusercontent.com/82763714/150362196-d9ad7816-9e5f-47d1-a214-aee03bfc7beb.png">
