@@ -1,0 +1,33 @@
+{% extends 'base/main.html' %} {% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<div class="header-bar">
+    <div>
+        <h1>Hello {{request.user|title}}!</h1>
+    </div>
+
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">Logout</a> {% else %}
+    <a href="{% url 'login' %}">Login</a> {% endif %}
+</div>
+
+
+<div id="tasklist" class="task-items-wrapper">
+    {% for task in tasks %}
+    <div class="task-wrapper" data-position="{{task.pk}}">
+        <div class="task-title" style="text-align: left; padding-left: 18px;">
+            <p><b><input type="checkbox"> {{task.title}} </b> | {{task.description}} </p>
+        </div>
+    </div>
+
+    {% empty %}
+    <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+        <h3>You have no new tasks</h3>
+    </div>
+    {% endfor %}
+    <div style="text-align: center; padding: 1px 0 10px 0; line-height: 1em;">
+        <h3>Do you want to create a <a style="color: linear-gradient(#e66465, #9198e5);" href="{% url 'task-create' %}">new task</a>? </h3>
+    </div>
+</div>
+
+{% endblock content %}
